@@ -1,0 +1,43 @@
+---
+layout: page
+---
+
+<div class="home">
+
+
+  {{ content }}
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Flux RSS <i style="color: #f26522; margin-left: 8px" class="fa fa-rss fa-1g"></i></a></p>
+
+  <section class="blog-index grid-4 has-gutter-l">
+    <section class="three-quarters">
+      <h2>Derniers articles</h2>
+
+      <ul class="post-list">
+      {% for post in site.posts %}
+        <li class="article article--resume">
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+          <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+
+          <p><a class="post-link" href="{{ post.url | relative_url }}">Lire la suite...</a></p>
+        </li>
+      {% endfor %}
+    </ul>
+    </section>
+
+
+    <aside class="blog-aside one-quarter">
+      <h2>Catégories</h2>
+      <ul>
+        {% for category in site.categories %}
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+          <li class="category-head"><a href="{{ site.url }}/categories#{{ category_name }}">{{ category_name }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </section>
+
+</div>

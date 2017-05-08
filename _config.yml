@@ -1,0 +1,77 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Thibault Carmantrand
+author: Thibault Carmantrand
+subtitle: Intégrateur - Développeur Web à Rennes
+email: contact@carmantrand.fr
+description: > # this means to ignore newlines until "baseurl:"
+  Intégrateur - Développeur Web, je crée des sites web à Rennes.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://carmantrand.fr/" # the base hostname & protocol for your site, e.g. http://example.com
+
+permalink: /:title/
+
+twitter_username: ThibaultCMTD
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - jekyll-toc
+  - jekyll-autoprefixer
+  - jekyll-youtube
+  - jekyll-archives
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+excerpt_separator: "<!--more-->"
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+# Collections
+collections:
+  projects:
+    output: true
+
+
+disqus:
+  shortname: carmantrand.disqus.com
+
+
+sitemap:
+  filename: "/sitemap.xml"
+  exclude:
+    - "/atom.xml"
+    - "/feed.xml"
+    - "/feed/index.xml"
+  include_posts:
+    -"/index.html"
+    -"/blog/index.html"
+
+
+jekyll-archives:
+  enabeld: all
+  layout: 'archive'
+  permalinks:
+    category: '/categories/'

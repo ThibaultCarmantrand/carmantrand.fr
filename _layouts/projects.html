@@ -1,0 +1,20 @@
+---
+layout: page
+title: Mes projets
+---
+
+<section class="grid-4-small-2 has-gutter">
+  {{ content }}
+
+  {% for project in site.projects %}
+
+  <article class="card card--project" style="background-image: url({{ project.image }});">
+    <section class="card--project__content">
+      <img src="{{ project.image }}" alt="{{ project.title }}" />
+      <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+    </section>
+  </article>
+
+  {% endfor %}
+
+</section>

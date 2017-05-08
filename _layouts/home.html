@@ -1,0 +1,97 @@
+---
+layout: default
+---
+<section class="home">
+
+  <section class="home__banner home__section">
+      <section class="banner__title">
+        {% comment %}<p><img class="logo" src="/assets/img/logo.svg" width="128px"/></p>{% endcomment %}
+        <h1 class="page-heading">{{ site.title }}</h1>
+        <p style="font-style:italic;"><strong>{{ site.subtitle }}</strong></p>
+
+        <p class="banner__invit">Vous avez besoin d'un site ?</p>
+        <p><a class="cta" href="{{ site.baseurl }}/contact/">contactez-moi</a></p>
+
+        <section class="share-page">
+          <a href="https://twitter.com/ThibaultCMTD" title="Twitter">
+            <span class="fa-stack fa-1g">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x icon-inverse"></i>
+            </span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/thibaultcarmantrand/" title="LinkedIn">
+            <span class="fa-stack fa-1g">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x icon-inverse"></i>
+            </span>
+          </a>
+
+          <a href="https://codepen.io/ThibaultCarmantrand/"  title="Codepen">
+            <span class="fa-stack fa-1g">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-codepen fa-stack-1x icon-inverse"></i>
+            </span>
+          </a>
+
+          <a href="https://github.com/ThibaultCarmantrand"  title="Github">
+            <span class="fa-stack fa-1g">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-github fa-stack-1x icon-inverse"></i>
+            </span>
+          </a>
+        </section>
+      </section>
+
+      <p class="scroll-icon">
+        <a href="#anchor">
+          <i class="fa fa-arrow-circle-down"></i>
+        </a>
+      </p>
+  </section>
+
+  <div id="anchor"></div>
+
+
+  <section class="home__section">
+    <h2>Mes derniers projets</h2>
+
+    <section class="grid-4-small-2 has-gutter">
+      {% for project in site.projects limit:4 %}
+        <article class="card card--project card-is-clickable" style="background-image: url({{ project.image }});">
+          <section class="card--project__content">
+            <img src="{{ project.image }}" alt="{{ project.title }}" />
+            <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+          </section>
+        </article>
+      {% endfor %}
+    </section>
+  </section>
+
+
+
+  <section class="home__section">
+    <h2>Mes derniers articles</h2>
+
+    <section class="grid-3-small-1 has-gutter">
+      {% for post in site.posts limit:2 %}
+        <li class="article article--resume">
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+          <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+
+          <p><a class="post-link" href="{{ post.url | relative_url }}">Lire la suite...</a></p>
+        </li>
+      {% endfor %}
+
+      <a href="{{ site.baseurl }}/blog/" class="card blog-access cta">
+        Accéder au Blog
+      </a>
+    </section>
+  </section>
+
+  {{ content }}
+</section>

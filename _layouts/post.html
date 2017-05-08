@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<section class="grid-4 has-gutter-l">
+  <article class="post three-quarters" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+            {{ page.date | date: "%b %-d, %Y" }}
+        </time>
+        {% if page.author %}
+          <span  class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+        {% endif %}
+        <span class="post-categories">
+          {% for category in page.categories %}
+            <span><a class="post-category" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category }}</a></span>
+          {% endfor %}
+        </span>
+      </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      {{ content | toc }}
+    </div>
+
+    {% include share-page.html %}
+
+    {% if site.disqus.shortname %}
+      {% include disqus_comments.html %}
+    {% endif %}
+  </article>
+
+  <aside class="blog-aside one-quarter">
+    <h2>Catégories</h2>
+    <ul>
+      {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <li class="category-head"><a href="{{ site.url }}/categories#{{ category_name }}">{{ category_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <section class="home__section full">
+    <h2>Mes derniers articles</h2>
+
+    <section class="grid-3-small-1 has-gutter">
+      {% for post in site.posts limit:2 %}
+        <li class="article article--resume">
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+          <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+
+          <p><a class="post-link" href="{{ post.url | relative_url }}">Lire la suite...</a></p>
+        </li>
+      {% endfor %}
+
+      <a href="{{ site.baseurl }}/blog/" class="card blog-access cta">
+        Accéder au Blog
+      </a>
+    </section>
+  </section>
+</section>

@@ -1,0 +1,25 @@
+<section class="share-page card">
+    <h3>Partager cet article :</h3>
+    <section class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url }}&text={{ page.title }}:%20{{ site.url}}{{ page.url }}&via=ThibaultCMTD" target="_blank" title="Partager sur Twitter">
+            <span class="fa-stack fa-1g">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x icon-inverse"></i>
+            </span>
+        </a>
+
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url}}{{ page.url }}&title={{ page.title }}&summary={{ page.excerpt | remove: '<p>' | remove: '</p>' }}&source={{ site.url}}{{ page.url }}" target="_blank" title="Partager LinkedIn">
+            <span class="fa-stack fa-1g">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x icon-inverse"></i>
+            </span>
+        </a>
+
+        <a href="mailto:?subject={{ page.title }}&body=Bonjour! Cet article pourrait vous intéresser. {{ site.url }}{{ page.url}}"  title="Envoyer par e-mail" target="_blank">
+            <span class="fa-stack fa-1g">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x icon-inverse"></i>
+            </span>
+        </a>
+    </section>
+</section>

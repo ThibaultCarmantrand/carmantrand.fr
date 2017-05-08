@@ -1,0 +1,22 @@
+---
+layout: page
+---
+<article class="project_page grid has-gutter-l">
+
+  <aside class="project_aside one-quarter">
+  {% if page.image %}
+    <figure>
+      <img src="{{ site.url }}{{ page.image }}" alt="{{ page.title }}">
+      <figcation>{{ page.title }}</figcation>
+    </figure>
+  {% endif %}
+
+  <p>URL : <a href="{{ page.project_url }}">{{ page.project_url }}</a></p>
+  <p>Effectué : {{ page.interventions }}</p>
+  </aside>
+
+
+  <section class="project_main three-quarters">
+    {{ content }}
+  </section>
+</article>

@@ -1,0 +1,42 @@
+---
+layout: page
+permalink: /categories/
+title: Catégories
+---
+
+<section class="grid has-gutter">
+
+  <section class="three-quarters">
+    {% for category in site.categories %}
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+
+      <h2 id="{{category_name}}">{{ category_name }}</h2>
+      <ul class="post-list grid-2-small-1 has-gutter">
+        {% for post in site.categories[category_name] %}
+          <li class="article article--resume">
+            <h2>
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+            <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+
+            <p><a class="post-link" href="{{ post.url | relative_url }}">Lire la suite...</a></p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+
+
+  <aside class="blog-aside one-quarter">
+    <h2>Catégories</h2>
+    <ul>
+      {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <li class="category-head"><a href="#{{ category_name }}">{{ category_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+</section>

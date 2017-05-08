@@ -1,0 +1,40 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+  {{ content }}
+<section class="grid has-gutter contact_section">
+
+  <form action="https://formspree.io/contact@carmantrand.fr" method="POST" class="two-thirds contact-form card no-clickable">
+    <h2>Directement</h2>
+    <p class="contact-form__element">
+      <input type="email" name="_replyto">
+      <label for="email">Email</label>
+    </p>
+    <p class="contact-form__element">
+      <textarea name="message" rows="10"></textarea>
+      <label for="message">Message</label>
+    </p>
+    <p class="contact-form__element">
+      <button type="submit" class="submit-btn">Envoyer</button>
+    </p>
+    <input type="hidden" name="_subject" value="Nouveau contact via carmantrand.fr">
+    <input type="hidden" name="_next" value="/contact/">
+  </form>
+
+  <section class="one-third">
+    <section class="card card--contact no-clickable">
+      <h2>Par téléphone</h2>
+      <p>07.86.83.70.65</p>
+    </section>
+
+    <section class="card card--contact no-clickable">
+      <h2>Par mail</h2>
+      <p>contact@carmantrand.fr</p>
+    </section>
+  </section>
+
+
+</section>
