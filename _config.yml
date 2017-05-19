@@ -20,7 +20,7 @@ email: contact@carmantrand.fr
 description: > # this means to ignore newlines until "baseurl:"
   Intégrateur - Développeur Web, je crée des sites web à Rennes.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://carmantrand.fr/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://carmantrand.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:title/
 
