@@ -1,39 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://carmantrand.fr//404/</loc>
-        <lastmod>2017-04-10T17:13:25+02:00</lastmod>
+        <loc>http://localhost:4000/404/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//about/</loc>
-        <lastmod>2017-04-11T14:58:31+02:00</lastmod>
+        <loc>http://localhost:4000/about/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//categories/</loc>
-        <lastmod>2017-04-08T12:15:48+02:00</lastmod>
+        <loc>http://localhost:4000/categories/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//blog/</loc>
-        <lastmod>2017-04-10T16:20:26+02:00</lastmod>
+        <loc>http://localhost:4000/blog/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//contact/</loc>
-        <lastmod>2017-04-04T15:00:55+02:00</lastmod>
+        <loc>http://localhost:4000/contact/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//</loc>
-        <lastmod>2017-04-10T16:22:00+02:00</lastmod>
+        <loc>http://localhost:4000/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//legals/</loc>
-        <lastmod>2017-04-10T16:58:51+02:00</lastmod>
+        <loc>http://localhost:4000/legals/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//assets/main.css</loc>
-        <lastmod>2017-04-11T11:55:15+02:00</lastmod>
+        <loc>http://localhost:4000/assets/main.css</loc>
+        <lastmod>2017-05-19T10:33:40+02:00</lastmod>
     </url>
     <url>
-        <loc>http://carmantrand.fr//projets/</loc>
-        <lastmod>2017-04-04T15:19:48+02:00</lastmod>
+        <loc>http://localhost:4000/projets/</loc>
+        <lastmod>2017-05-19T10:28:33+02:00</lastmod>
     </url>
 </urlset>
