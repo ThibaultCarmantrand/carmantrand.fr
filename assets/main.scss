@@ -221,25 +221,6 @@ code {
             &::after {
                 border-radius: 0;
             }
-
-            &::before {
-                width: calc(100% - #{$spacing-unit});
-                height: $spacing-unit / 2;
-                left: calc(calc(50% + #{$spacing-unit}) - 50%);
-                bottom: calc(100% - calc(#{$spacing-unit} / 4));
-            }
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            border-radius: 50%;
-            background-color: $brand-color;
-            left: 0;
-            bottom: 100%;
-            transition: all 0.3s $easing-curve;
         }
 
         &::after {
@@ -354,7 +335,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='304' height='304' viewBo
 .cta {
     background-color: $brand-color;
     padding: $spacing-unit / 2 $spacing-unit;
-    color: $dark-bg-color;
+    color: $grey-color-light;
     transition: all 0.1s $easing-curve;
     position: relative;
     font-weight: 500;
@@ -651,6 +632,10 @@ textarea {
 
 i.fa.icon-inverse {
     color: $dark-bg-color;
+
+    &:hover {
+        color: $grey-color-light;
+    }
 }
 
 .share-buttons{

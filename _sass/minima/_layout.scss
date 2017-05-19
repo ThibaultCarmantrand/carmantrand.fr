@@ -23,12 +23,12 @@
   margin-bottom: 0;
   // margin-left: 64px;
   float: left;
-  color: $grey-color;
+  color: $grey-color-light;
   position: relative;
 
   &,
   &:visited {
-    color: $grey-color;
+    color: $grey-color-light;
   }
 
   &:hover {
@@ -62,7 +62,7 @@
   }
 
   .page-link {
-    color: $grey-color;
+    color: $grey-color-light;
     line-height: $base-line-height;
     border-bottom: none;
     transition: color 0.1s $easing-curve;
