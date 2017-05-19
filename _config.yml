@@ -71,7 +71,7 @@ sitemap:
 
 
 jekyll-archives:
-  enabeld: all
+  enabled: all
   layout: 'archive'
   permalinks:
     category: '/categories/'
